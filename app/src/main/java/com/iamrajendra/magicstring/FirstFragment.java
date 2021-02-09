@@ -4,13 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class FirstFragment extends Fragment {
+import com.iamrajendra.magicstr.main.RString;
 
+public class FirstFragment extends Fragment {
+private TextView  textView;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -22,6 +25,11 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        textView = view.findViewById(R.id.textview_first);
+        RString string  = new RString(getString(R.string.magic_str));
+        string.setBold("Bold");
+        textView.setText(string.toString());
+
 
 
     }

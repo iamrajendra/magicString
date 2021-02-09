@@ -52,4 +52,9 @@ public class RString {
         spannableString.setSpan(urlSpan, left, right, 0);
         return this;
     }
+
+    @Override
+    public String toString() {
+        return spannableString.toString();
+    }
 }
