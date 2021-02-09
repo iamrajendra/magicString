@@ -1,0 +1,3 @@
+include ':magicstr'
+include ':app'
+rootProject.name = "MagicString"
